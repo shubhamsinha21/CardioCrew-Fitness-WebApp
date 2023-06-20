@@ -1,13 +1,24 @@
+import React from "react";
+import { Route, Routes } from "react-router-dom"
+import { Box } from "@mui/material"
+
+
+import Home from "./pages/Home";
+import ExerciseDetail from "./pages/ExerciseDetail"
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer"
+
 import "./App.css"
-// import { BrowserRouter } from "react-router-dom"ex
 
 function App() {
   return (
-    <div className="App">
-      <h1>hello</h1>
-      <h2>hello</h2>
-
-    </div>
+    <Box width="400px">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/exercise/:id" element={<ExerciseDetail />}></Route>
+      </Routes>
+    </Box>
   );
 }
 
