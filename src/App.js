@@ -12,12 +12,13 @@ import "./App.css"
 
 function App() {
   return (
-    <Box width="400px">
+    <Box width="400px" sx={{ width: { xl: "1448px" } }} m="auto">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/exercise/:id" element={<ExerciseDetail />}></Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/exercise/:id" element={<ExerciseDetail />} />
       </Routes>
+      <Footer />
     </Box>
   );
 }
